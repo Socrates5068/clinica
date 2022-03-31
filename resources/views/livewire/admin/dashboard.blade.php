@@ -1,7 +1,7 @@
 <div>
 
     <div>
-        @livewire('admin.menu-bar', ['application' => env('APP_NAME'), 'content' => 'Dasboard'])
+        @livewire('admin.menu-bar', ['application' => env('APP_NAME'), 'content1' => 'Dasboard'])
     </div>
 
     {{-- <div class="grid grid-cols-12 gap-6">

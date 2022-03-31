@@ -44,9 +44,12 @@
         {{ $slot }}
     </x-admin.side-menu>
 
-    <x-admin.main-color />
+    <div class="hidden md:block">
+        <x-admin.dark-mode />
+        
+        <x-admin.main-color />
+    </div>
     
-    <x-admin.dark-mode />
     
     @stack('modals')
 

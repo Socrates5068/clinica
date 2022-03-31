@@ -1,12 +1,12 @@
 <div>
     <h2 class="intro-y text-lg font-medium mt-10">
-        Users Layout 
-        {{ session('dark_mode')}}
-        {{ session('color_scheme')}}
+        Usuarios
     </h2>
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
-            <button class="btn btn-primary shadow-md mr-2">Agregar nuevo usuario</button>
+            <a href="{{route('admin.register')}}">
+                <button class="btn btn-primary shadow-md mr-2">Agregar nuevo usuario</button>
+            </a>
             <div class="dropdown">
                 <button wire:ignore class="dropdown-toggle btn px-2 box" aria-expanded="false" data-tw-toggle="dropdown">
                     <span class="w-5 h-5 flex items-center justify-center"> <i class="w-4 h-4"
@@ -60,8 +60,11 @@
         <!-- END: Pagination -->
 
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-nowrap items-center">
-            <nav class="w-full sm:w-auto sm:mr-auto">
+            <nav class="w-full hidden md:block">
                 {{ $users->links() }}
+            </nav>
+            <nav class="w-full sm:w-auto sm:mr-auto md:hidden">
+                {{ $users->links('pagination::tailwind') }}
             </nav>
             <select wire:model="paginate" class="w-20 form-select box mt-3 sm:mt-0">
                 <option value="10">10</option>

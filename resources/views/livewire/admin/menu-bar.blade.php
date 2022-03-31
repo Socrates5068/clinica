@@ -4,7 +4,16 @@
     <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">{{ $application }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ $content }}</li>
+            <li class="breadcrumb-item active" aria-current="page">{{ $content1 }}</li>
+            @isset($content2)
+                <li class="breadcrumb-item active" aria-current="page">{{ $content2 }}</li>
+            @endisset
+            @isset($content3)
+            <li class="breadcrumb-item active" aria-current="page">{{ $content3 }}</li>
+            @endisset
+            @isset($content4)
+            <li class="breadcrumb-item active" aria-current="page">{{ $content4 }}</li>
+            @endisset
         </ol>
     </nav>
     <!-- END: Breadcrumb -->

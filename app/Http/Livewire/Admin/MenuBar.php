@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class MenuBar extends Component
 {
-    public $application, $content;
+    public $application, $content1, $content2, $content3, $content4;
 
     protected $listeners = ['render'];
 
